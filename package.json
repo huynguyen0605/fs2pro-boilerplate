@@ -10,7 +10,9 @@
     "react-router": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.3",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "redux-state-sync": "^2.0.3",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
