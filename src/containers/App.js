@@ -4,6 +4,9 @@ import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter as Router } from 'connected-react-router';
 import { history } from '../redux'
 
+
+import { userIsAuthenticated } from '../hoc/authentication';
+
 import { path } from '../utils'
 
 import screen1 from '../routes/screen-1';
@@ -17,8 +20,8 @@ class App extends Component {
                 <Router history={history}>
                     <Switch>
                         <Route path={path.screen1} component={screen1} />
-                        <Route path={path.screen2} component={screen2} />
-                        <Route path={path.screen3} component={screen3} />
+                        <Route path={path.screen2} component={userIsAuthenticated(screen2)} />
+                        <Route path={path.screen3} component={userIsAuthenticated(screen3)} />
                     </Switch>
                 </Router>
             </Fragment>

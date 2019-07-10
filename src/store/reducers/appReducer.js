@@ -2,6 +2,7 @@ import actionTypes from '../actions/actionTypes';
 
 const initialState = {
     started: true,
+    isLoggedIn: true,
     screen1Value: 1,
     screen2Value: 2,
     screen3Value: 3,
