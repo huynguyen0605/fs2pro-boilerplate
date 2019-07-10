@@ -1,11 +1,15 @@
 import { createLogger } from "redux-logger";
 import thunkMiddleware from "redux-thunk";
 
+import { createBrowserHistory } from 'history';
+
 import {createStore, applyMiddleware, compose} from 'redux';
 import { createStateSyncMiddleware} from 'redux-state-sync';
 
 import createRootReducer from './store/reducers/rootReducer';
 import actionTypes from './store/actions/actionTypes';
+
+import config from './config';
 
 const environment = process.env.NODE_ENV || "development";
 const isDevelopment = environment === "development";
@@ -31,5 +35,7 @@ const reduxStore = createStore(
 )
 
 const dispatch = reduxStore.dispatch;
+
+export const history = createBrowserHistory({ basename: config.app.ROUTER_BASE_NAME});
 
 export default reduxStore;

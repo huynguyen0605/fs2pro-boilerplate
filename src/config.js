@@ -1,6 +1,7 @@
 export default {
     api: {
         API_BASE_URL: "",
+        ROUTER_BASE_NAME: null,
     },
     app: {
         /**
