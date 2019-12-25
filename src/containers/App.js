@@ -13,7 +13,17 @@ import screen1 from '../routes/screen-1';
 import screen2 from '../routes/screen-2';
 import screen3 from '../routes/screen-3';
 
+import axios from '../axios';
+
 class App extends Component {
+    componentDidMount() {
+        console.log('huynvq::===========>getDummy');
+        axios.get('sample/returnMongoDummy').then(data => {
+            console.log('huynvq::============>data', data);
+        }).catch(error => {
+            console.log('huynvq::==========>error', error);
+        })
+    };
     render() {
         return (
             <Fragment>
